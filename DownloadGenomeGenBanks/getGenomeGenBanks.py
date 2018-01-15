@@ -12,19 +12,20 @@ import re
 import gzip
 
 # Define directory where gene list are present
-input_dir = ('/Users/malcarl/Documents/Courses/'
-	'python-programming-for-life-science-researchers/sequence_files/'
-	'Python-programming-for-life-science-researchers/DownloadGenomeGenBanks')
+input_dir = '' #('/Users/malcarl/Documents/Courses/'
+	#'python-programming-for-life-science-researchers/sequence_files/'
+	#'Python-programming-for-life-science-researchers/DownloadGenomeGenBanks')
 # Define directory for output files
-output_dir = ('/Users/malcarl/Documents/Courses/'
-	'python-programming-for-life-science-researchers/sequence_files/'
-	'Python-programming-for-life-science-researchers/DownloadGenomeGenBanks')
+output_dir = '' #('/Users/malcarl/Documents/Courses/'
+	#'python-programming-for-life-science-researchers/sequence_files/'
+	#'Python-programming-for-life-science-researchers/DownloadGenomeGenBanks')
 # Specify name of genome lists
 mito_Genome_List = 'MitoGenomeList.txt'
 Genome_List = 'GenomeList.txt'
 
-# Move to input directory
-os.chdir(input_dir)
+# Move to input directory if specified
+if input_dir != '':
+	os.chdir(input_dir)
 
 # Create lists to store strain name
 strain_names_MT = []
@@ -78,8 +79,9 @@ for directory in directories:
 			#print new_result
 			assembly_ID_full.append(new_result)
 
-# Change to output directory
-os.chdir(output_dir)
+# Change to output directory if specified
+if output_dir != '':
+	os.chdir(output_dir)
 
 # Download gbff file for each assembly
 for assembly in assembly_ID_full:
@@ -110,7 +112,9 @@ for assembly in assembly_ID_full:
 # Close connection
 ftp.quit()
 
+current_dir = os.getcwd()
+
 # remove compressed files after unzipping
-for file in os.listdir(output_dir):
+for file in os.listdir(current_dir):
 	if file.endswith('.gz'):
 		os.remove(file)
