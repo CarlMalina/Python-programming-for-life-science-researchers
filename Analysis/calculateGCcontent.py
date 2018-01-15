@@ -6,11 +6,12 @@
 import os
 from Bio import SeqIO
 # Define input path
-input_path = ('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/'
-	'sequence_files/Python-programming-for-life-science-researchers/Analysis')
+input_path = '' #('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/'
+	#'sequence_files/Python-programming-for-life-science-researchers/Analysis')
 
-# Change directory
-os.chdir(input_path)
+# Change directory if specified
+if input_path != '':
+	os.chdir(input_path)
 # File for testing function
 GenBank_file = 'NC_001224.1.gb'
 # Define a function that calculates GC content
