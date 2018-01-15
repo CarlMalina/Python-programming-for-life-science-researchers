@@ -6,16 +6,17 @@
 import os
 
 # Define input and output paths
-input_path = ('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/sequence_files/'
-	'Python-programming-for-life-science-researchers/DownloadMitoGenBanks')
-output_path = ('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/sequence_files/'
-	'Python-programming-for-life-science-researchers/DownloadMitoGenBanks')
+input_path = '' #('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/sequence_files/'
+	#'Python-programming-for-life-science-researchers/DownloadMitoGenBanks')
+output_path = '' #('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/sequence_files/'
+	#'Python-programming-for-life-science-researchers/DownloadMitoGenBanks')
 # Define name of input and output file
 input_file = 'MitoGenomeList.txt'
 output_file = 'MitoLocusIDs.txt'
 
-# Change directory
-os.chdir(input_path)
+# Change directory if input_path given
+if input_path != '':
+	os.chdir(input_path)
 # Extract the RefSeq IDs from the organelle genome file:
 locusIDs = []
 organism_names = []
@@ -35,8 +36,9 @@ with open(input_file, 'r') as inFile:
 			else:
 				locusIDs.append(ID)
 
-# Change directory
-os.chdir(output_path)
+# Change directory to output_path if given
+if output_path != '':
+	os.chdir(output_path)
 # Write organism name and GenBankID to a file:
 with open(output_file,'w') as outfile:
 	for index, item in enumerate(organism_names):
