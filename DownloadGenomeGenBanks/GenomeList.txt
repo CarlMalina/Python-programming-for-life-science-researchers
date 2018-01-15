@@ -1,0 +1,7 @@
+#Organism Name	Organism Groups	Strain	Assembly	Size(Mb)	GC%	Scaffolds	CDS	Genes	tRNA
+Saccharomyces cerevisiae YJM993	Eukaryota;Fungi;Ascomycetes	YJM993	GCA_000662435.2	12.4989	38.5256	18	5470	6961	293
+Saccharomyces cerevisiae YJM195	Eukaryota;Fungi;Ascomycetes	YJM195	GCA_000975585.2	12.7524	38.5905	17	5371	7078	294
+Saccharomyces cerevisiae YJM244	Eukaryota;Fungi;Ascomycetes	YJM244	GCA_000975615.2	12.8576	38.7264	18	5329	7376	286
+Saccharomyces cerevisiae YJM1078	Eukaryota;Fungi;Ascomycetes	YJM1078	GCA_000975645.3	11.8576	38.2375	18	5424	6152	294
+Saccharomyces cerevisiae YJM1083	Eukaryota;Fungi;Ascomycetes	YJM1083	GCA_000975675.2	12.4684	38.4412	18	5403	6754	296
+Saccharomyces cerevisiae YJM1129	Eukaryota;Fungi;Ascomycetes	YJM1129	GCA_000975705.2	13.0833	38.7309	18	5475	7642	294
