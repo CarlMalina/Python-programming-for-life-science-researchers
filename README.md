@@ -31,7 +31,7 @@ This is a repository containing scripts for the course project. The repository i
 
 ## Requirements
 
-Python 2.7
-bioython version 1.69
-matplotlib version 2.0.2
+* Python 2.7
+* bioython version 1.69
+* matplotlib version 2.0.2
 
