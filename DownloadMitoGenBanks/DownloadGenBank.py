@@ -10,15 +10,16 @@ from Bio import Entrez as entrez
 import os
 
 # Specify the directory of the input file
-input_dir = ('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/sequence_files/'
-	'Python-programming-for-life-science-researchers/DownloadMitoGenBanks')
+input_dir = '' #('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/sequence_files/'
+	#'Python-programming-for-life-science-researchers/DownloadMitoGenBanks')
 # Specify the output path for the GenBank files
-output_dir = ('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/sequence_files/'
-	'Python-programming-for-life-science-researchers/DownloadMitoGenBanks')
+output_dir = '' #('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/sequence_files/'
+	#'Python-programming-for-life-science-researchers/DownloadMitoGenBanks')
 # Specify name of input file
 input_file = 'MitoLocusIDs.txt'
-# Move to input directory
-os.chdir(input_dir)
+# Move to input directory if defined
+if input_dir != '':
+	os.chdir(input_dir)
 
 # Create lists to store locus IDs and strain names
 locusIDs = []
@@ -43,8 +44,9 @@ with open(input_file,'r') as infile:
 		else:
 			locusIDs.append(ID)
 
-# Move to output directory
-os.chdir(output_dir)
+# Move to output directory if defined
+if output_dir != '':
+	os.chdir(output_dir)
 
 # Run Genbank query for all RefSeq IDs:
 count = 0
@@ -52,7 +54,7 @@ num_IDs = len(locusIDs)
 for index, ID in enumerate(locusIDs):
 	name = strain_name[index]
 	# Check if strain name already in file directory to avoid overwriting
-	if name + '.gb' in os.listdir(output_dir):
+	if name + '.gb' in os.getcwd():
 		name = name + '_' + str(1) 
 	with open(name + '.gb','w') as outfile:
 		entrez.email = 'carl_malina@hotmail.com'
