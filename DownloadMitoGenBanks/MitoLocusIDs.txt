@@ -1,0 +1,7 @@
+Saccharomyces cerevisiae	NC_027264.1/KR260476.1
+Saccharomyces cerevisiae BSPX042	CP014741.1
+Saccharomyces cerevisiae CDRDR_sf_H	CP008014.1
+Saccharomyces cerevisiae CRIRIwf_A11	CP007997.1
+Saccharomyces cerevisiae YJM1078	CP004115.1
+Saccharomyces cerevisiae YJM1083	CP006508.1
+Saccharomyces cerevisiae YJM1129	CP006509.1
