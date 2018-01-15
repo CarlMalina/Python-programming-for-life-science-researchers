@@ -1,0 +1,8 @@
+#Organism Name	Organism Groups	Strain	Size(Mb)	GC%	Type	Replicons	CDS	Genes	tRNA
+Saccharomyces cerevisiae	"Eukaryota;Fungi;Ascomycetes"	-	0.078917	16.1347	mitochondrion	NC_027264.1/KR260476.1	8	35	24
+Saccharomyces cerevisiae BSPX042	"Eukaryota;Fungi;Ascomycetes"	BSPX042	0.045434	23.9534	mitochondrion	MT:CP014741.1	0	0	0
+Saccharomyces cerevisiae CDRDR_sf_H	"Eukaryota;Fungi;Ascomycetes"	CDRDR_sf_H	0.085779	22.1523	mitochondrion	MT:CP008014.1	0	0	0
+Saccharomyces cerevisiae CRIRIwf_A11	"Eukaryota;Fungi;Ascomycetes"	CRIRIwf_A11	0.085779	23.1852	mitochondrion	MT:CP007997.1	0	0	0
+Saccharomyces cerevisiae YJM1078	"Eukaryota;Fungi;Ascomycetes"	YJM1078	0.082025	16.2597	mitochondrion	MT:CP004115.1	14	41	24
+Saccharomyces cerevisiae YJM1083	"Eukaryota;Fungi;Ascomycetes"	YJM1083	0.089444	16.9246	mitochondrion	MT:CP006508.1	18	45	24
+Saccharomyces cerevisiae YJM1129	"Eukaryota;Fungi;Ascomycetes"	YJM1129	0.081706	16.2179	mitochondrion	MT:CP006509.1	10	37	24
