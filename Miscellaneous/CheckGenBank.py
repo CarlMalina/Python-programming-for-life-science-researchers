@@ -1,13 +1,15 @@
 #!/usr/bin/python
 
 # Check if sequence present in Genbank file
-input_path = ('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/'
-	'sequence_files/Python-programming-for-life-science-researchers/Miscellaneous')
+input_path = '' #('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/'
+	#'sequence_files/Python-programming-for-life-science-researchers/Miscellaneous')
 
 import os
-# Change directory
-os.chdir(input_path)
-files = os.listdir(input_path)
+# Change directory if input_path specified
+if input_path != '':
+	os.chdir(input_path)
+current_directory = os.getcwd()	
+files = os.listdir(current_directory)
 files_without_sequence = []
 
 for file in files:
