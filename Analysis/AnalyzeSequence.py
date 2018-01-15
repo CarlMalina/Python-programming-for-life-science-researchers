@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 
 # Define the path for GenBank files
 
-input_path = ('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/'
-			  'sequence_files/Python-programming-for-life-science-researchers/Analysis')
+input_path = '' #('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/'
+			  #'sequence_files/Python-programming-for-life-science-researchers/Analysis')
 # Define path for output figures
 output_path = '' #('/Users/malcarl/Documents/Courses/python-programming-for-life-science-researchers/sequence_files/'
 	#'Python-programming-for-life-science-researchers/Analysis/Plots')
@@ -173,8 +173,9 @@ def count_codons(GenBankFile):
 		title2 = 'Amino_acid_usage_' + name + '.png'
 		plt.savefig(title2,bbox_inches = 'tight')
 
-		# Change directory to input directory
-		os.chdir(input_path)
+		# Change directory to input directory if specified
+		if input_path != '':
+			os.chdir(input_path)
 
 		return codon_usage, amino_acid_usage
 
