@@ -22,6 +22,8 @@ def GC_content(GenBankFile):
 			#print len(record.seq)
 			count = 0
 			coding_sequence = ''
+			tRNA_coding_sequence = ''
+			rRNA_coding_sequence = ''
 			# Check if CDS annotation present in GenBank file
 			for feature in record.features:
 				if feature.type == 'CDS':
@@ -29,18 +31,21 @@ def GC_content(GenBankFile):
 					#print feature.location
 					#print len(feature.location.extract(record).seq)
 					coding_sequence += feature.location.extract(record).seq
+				elif feature.type == 'tRNA':
+					tRNA_coding_sequence += feature.location.extract(record).seq
+				elif feature.type == 'rRNA':
+					rRNA_coding_sequence += feature.location.extract(record).seq
 				else:
 					continue
 			if count == 0:
 				print 'No annotation information in file', GenBankFile
 			else:
 				GC = sum(coding_sequence.count(nucleotide) for nucleotide in ['G','C','g','c'])
+				GC_tRNA = sum(tRNA_coding_sequence.count(nucleotide) for nucleotide in ['G','C','g','c'])
+				GC_rRNA = sum(rRNA_coding_sequence.count(nucleotide) for nucleotide in ['G','C','g','c'])
 				try:
-					return GC * 100.00 / len(coding_sequence)
+					return GC * 100.00 / len(coding_sequence), GC_tRNA * 100.00 / len(tRNA_coding_sequence), GC_rRNA * 100.00 / len(rRNA_coding_sequence)
 				except ZeroDivisionError:
 					return 0.0
-print 'GC-content: %f' % GC_content(GenBank_file)
-
-
-
+print 'GC-content CDS tRNA rRNA: %f %f %f' % GC_content(GenBank_file)
 
